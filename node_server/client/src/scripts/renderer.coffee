@@ -21,11 +21,11 @@ class Ekwip.Renderer
         # @uiPieces = new UiModel @model
         @setupView(canvas)
         @createModel()
-        @redraw()
+        @render()
 
     setupView: (root) =>
         WebGLHelper.CreateGLCanvas root, 'Canvas', false, (canvas) =>
-                        
+
             @scene = new THREE.Scene()
             @scene.add new THREE.AmbientLight 0x101010 #0x404040
             @scene.add new THREE.HemisphereLight(0xFFFFFF, 0x666666, 1)
@@ -39,27 +39,39 @@ class Ekwip.Renderer
             # renderer.autoUpdateScene = false
             # renderer.setFaceCulling THREE.CullFaceNone
 
-            @camera = new THREE.OrthographicCamera( 
-                0, 
-                window.innerWidth/5, 
-                0, 
-                -1 * window.innerHeight/5, -500, 1000)
-
+            @camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 20000)
+            @camera.position.set(0, 0, 200)
+            # @camera = new THREE.OrthographicCamera( 
+            #     0, 
+            #     window.innerWidth/5, 
+            #     0, 
+            #     -1 * window.innerHeight/5, -500, 1000)
+            
             @camera.rotation.set(0.3, 0, 0)
             
+            @controls = new THREE.OrbitControls @camera, @renderer.domElement
+            @controls.center.set(0, 0, 0)
+            @controls.addEventListener 'change', @render
+            
             @scene.add @camera
-
+            console.log @controls
             @renderer.setSize window.innerWidth, window.innerHeight
 
-            # setInterval @redraw, window.INTERVAL
+            # setInterval @render, window.INTERVAL
             window.addEventListener 'resize', @measure, false
             @measure()
 
-    redraw: =>
+            @animate()
+            @render()
+
+    render: =>
         # @myPlayerPosition = @getMyPlayerPosition() #We need this to move the viewport
         # @camera.update(@myPlayerPosition, @mouseHandler.getPosition())
-        
         @renderer.render @scene, @camera
+
+    animate: =>
+        requestAnimationFrame @animate
+        @controls.update()
 
     measure: =>
 
@@ -85,8 +97,8 @@ class Ekwip.Renderer
         # Ekwip.ui.resize(CMAPWIDTH*scale, CMAPHEIGHT*scale)
 
     createModel: =>
-        x = 50
-        y = -50
+        x = 0
+        y = 0
 
         u =
             rotation: -70
