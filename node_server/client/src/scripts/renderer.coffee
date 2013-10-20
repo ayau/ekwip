@@ -9,9 +9,11 @@ class Ekwip.Renderer
     textures:
         leg:
             blue: new THREE.MeshLambertMaterial(color: 0x000088)
+        rainbow: new THREE.MeshNormalMaterial()
 
 
     constructor: (canvas, model, socketid) ->
+        # TODO use canvas width and height
         # @width = canvas.width
         # @height = canvas.width
         @ctx = canvas.element
@@ -41,13 +43,7 @@ class Ekwip.Renderer
 
             @camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 20000)
             @camera.position.set(0, 0, 200)
-            # @camera = new THREE.OrthographicCamera( 
-            #     0, 
-            #     window.innerWidth/5, 
-            #     0, 
-            #     -1 * window.innerHeight/5, -500, 1000)
             
-            @camera.rotation.set(0.3, 0, 0)
             
             @controls = new THREE.OrbitControls @camera, @renderer.domElement
             @controls.center.set(0, 0, 0)
@@ -62,11 +58,9 @@ class Ekwip.Renderer
             @measure()
 
             @animate()
-            @render()
 
     render: =>
         # @myPlayerPosition = @getMyPlayerPosition() #We need this to move the viewport
-        # @camera.update(@myPlayerPosition, @mouseHandler.getPosition())
         @renderer.render @scene, @camera
 
     animate: =>
@@ -78,21 +72,10 @@ class Ekwip.Renderer
         windowWidth = window.innerWidth
         windowHeight = window.innerHeight
 
-        CMAPWIDTH = windowWidth
-        CMAPHEIGHT = windowHeight
-
-        wScale = 1100 / window.innerWidth
-        hScale = 765 / window.innerHeight
-
-        if hScale > wScale
-            scale = hScale
-        else
-            scale = wScale
-
-        @renderer.setSize CMAPWIDTH, CMAPHEIGHT
-        @camera.right = CMAPWIDTH/5 * scale
-        @camera.bottom = -1 * CMAPHEIGHT/5 * scale
+        @renderer.setSize windowWidth, windowHeight
+        @camera.aspect = windowWidth/windowHeight
         @camera.updateProjectionMatrix()
+        @render()
 
         # Ekwip.ui.resize(CMAPWIDTH*scale, CMAPHEIGHT*scale)
 
@@ -113,8 +96,8 @@ class Ekwip.Renderer
 
         # upper leg
         color = @textures.leg.blue
-        upperlegMesh = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 50, 30, 30, false), color)
-        upperlegMesh.position.set(0, 25, 0)
+        upperlegMesh = new THREE.Mesh(new THREE.CylinderGeometry(10, 5, 50, 30, 30, false), color)
+        upperlegMesh.position.set(0, 26, 0)
         upperleg = new THREE.Object3D()
         upperleg.add upperlegMesh
         upperleg.rotation.set(0, 0, toRadian(u.rotation))
@@ -122,29 +105,28 @@ class Ekwip.Renderer
         modelRoot['upper'] = upperleg
 
         # lower leg
-        lowerlegMesh = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 50, 30, 30, false), color)
-        lowerlegMesh.position.set(0, -25, 0)
+        lowerlegMesh = new THREE.Mesh(new THREE.CylinderGeometry(5, 7, 16, 30, 30, false), color)
+        lowerlegMesh.position.set(0.5, -9, 0)
+        lowerlegMesh.rotation.set(0, 0, 0.08)
+        lowerlegMesh2 = new THREE.Mesh(new THREE.CylinderGeometry(7, 4, 34, 30, 30, false), color)
+        lowerlegMesh2.position.set(0, -33, 0)
+        lowerlegMesh2.rotation.set(0, 0, -0.07)
         lowerleg = new THREE.Object3D()
         lowerleg.add lowerlegMesh
+        lowerleg.add lowerlegMesh2
         lowerleg.rotation.set(0, 0, toRadian(l.rotation))
         modelRoot.add lowerleg
-        modelRoot['lower'] = lowerleg
+        modelRoot['lower'] = 
+
+        # knee
+        color = @textures.rainbow
+        kneeMesh = new THREE.Mesh(new THREE.SphereGeometry(5, 30, 30), color);
+        modelRoot.add kneeMesh
 
         return modelRoot
 
     # degree to radian
     toRadian = (angle) ->
         return angle * Math.PI / 180
-
-
-    # buildBackground: (map) ->
-    #     SMAPWIDTH    = map.width
-    #     SMAPHEIGHT   = map.height
-
-    #     floorMesh = new THREE.Mesh( new THREE.CubeGeometry(SMAPWIDTH, SMAPHEIGHT, 1), Platoon.textures.level.floor)
-    #     floorMesh.position.set(SMAPWIDTH / 2,  -1 * SMAPHEIGHT / 2, -0.5)
-    #     # # floorMesh.updateMatrixWorld()
-    #     @scene.add floorMesh
-
 
 
