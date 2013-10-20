@@ -1,4 +1,7 @@
-window.ekwip = {}
+window.Ekwip = {}
 
 $ ->
-    console.log 'here'
+
+
+    canvas = document.getElementById('GLCanvas')
+    Ekwip.renderer = new Ekwip.Renderer(canvas)
