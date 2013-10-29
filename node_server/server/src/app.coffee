@@ -2,6 +2,7 @@ express    = require 'express'
 http       = require 'http'
 routes     = require './scripts/routes'
 {resp}     = require './scripts/response'
+io         = require 'socket.io'
 
 app = module.exports = express.createServer()
 
@@ -29,8 +30,29 @@ app.configure 'production', ->
 app.get '/', routes.index
 app.get '*', (req, res) -> resp.error res, resp.NOT_FOUND
 
+
+# clients
+clients = {}
+
+# Socket IO
+io.listen(app.listen(8080), {'log level': 1}).sockets.on 'connection', (socket) ->
+  clients[socket.id] = socket
+  
+  
+  socket.emit 'connected',
+    id: socket.id
+    # contents:
+
+  socket.on 'key', (data) ->
+    data.id = socket.id
+
+
+  socket.on 'disconnect', ->
+    delete clients[socket.id]
+
+
 # Heroku ports or 3000
-port = process.env.PORT || 3000
-app.listen port, ->
-    console.log 'Express server listening on port %d in %s mode', app.address().port, app.settings.env
+# port = process.env.PORT || 3000
+# app.listen port, ->
+#     console.log 'Express server listening on port %d in %s mode', app.address().port, app.settings.env
 

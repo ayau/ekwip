@@ -87,7 +87,7 @@ class Ekwip.Renderer
             rotation: -70
 
         l =
-            rotation: -30
+            rotation: -50
 
         modelRoot = new THREE.Object3D()
         @scene.add modelRoot
