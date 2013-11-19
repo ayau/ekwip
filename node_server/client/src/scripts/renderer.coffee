@@ -1,4 +1,5 @@
 #CONSTANTS
+window.INTERVAL = 20  #rate of redraw
 
 # global constants
 
@@ -17,12 +18,12 @@ class Ekwip.Renderer
         # @width = canvas.width
         # @height = canvas.width
         @ctx = canvas.element
-        # @model = model
+        @model = model
         # @socketid = socketid
         # @drawCommander = new DrawCommander()
         # @uiPieces = new UiModel @model
         @setupView(canvas)
-        @createModel()
+        @modelRoot = @createModel()
         @render()
 
     setupView: (root) =>
@@ -50,9 +51,10 @@ class Ekwip.Renderer
             @controls.addEventListener 'change', @render
             
             @scene.add @camera
-            console.log @controls
+            
             @renderer.setSize window.innerWidth, window.innerHeight
 
+            setInterval @render, window.INTERVAL
             # setInterval @render, window.INTERVAL
             window.addEventListener 'resize', @measure, false
             @measure()
@@ -60,6 +62,7 @@ class Ekwip.Renderer
             @animate()
 
     render: =>
+        @updateModel()
         # @myPlayerPosition = @getMyPlayerPosition() #We need this to move the viewport
         @renderer.render @scene, @camera
 
@@ -84,10 +87,14 @@ class Ekwip.Renderer
         y = 0
 
         u =
-            rotation: -70
+            rx: 0
+            ry: 0
+            rz: 0
 
         l =
-            rotation: -50
+            rx: 0
+            ry: 0
+            rz: 0
 
         modelRoot = new THREE.Object3D()
         @scene.add modelRoot
@@ -100,7 +107,7 @@ class Ekwip.Renderer
         upperlegMesh.position.set(0, 26, 0)
         upperleg = new THREE.Object3D()
         upperleg.add upperlegMesh
-        upperleg.rotation.set(0, 0, toRadian(u.rotation))
+        upperleg.rotation.set(toRadian(u.rx), toRadian(u.ry), toRadian(u.rz))
         modelRoot.add upperleg
         modelRoot['upper'] = upperleg
 
@@ -114,9 +121,9 @@ class Ekwip.Renderer
         lowerleg = new THREE.Object3D()
         lowerleg.add lowerlegMesh
         lowerleg.add lowerlegMesh2
-        lowerleg.rotation.set(0, 0, toRadian(l.rotation))
+        lowerleg.rotation.set(toRadian(l.rx), toRadian(l.ry), toRadian(l.rz))
         modelRoot.add lowerleg
-        modelRoot['lower'] = 
+        modelRoot['lower'] = lowerleg
 
         # knee
         color = @textures.rainbow
@@ -124,6 +131,17 @@ class Ekwip.Renderer
         modelRoot.add kneeMesh
 
         return modelRoot
+
+    updateModel: =>
+        # targetRotation = @modelRoot.upper.rotation.clone()
+        # targetRotation.set(@model.u.x, @model.u.y, @model.u.z)
+        # @modelRoot.upper.rotation.lerp(targetRotation, 0.8)
+        @modelRoot.upper.rotation.set(toRadian(@model.u.x), toRadian(@model.u.y), toRadian(@model.u.z))
+
+        # targetRotation = @modelRoot.lower.rotation.clone()
+        # targetRotation.set(@model.l.x, @model.l.y, @model.l.z)
+        # @modelRoot.lower.rotation.lerp(targetRotation, 0.8)
+        @modelRoot.lower.rotation.set(toRadian(@model.l.x), toRadian(@model.l.y), toRadian(@model.l.z))
 
     # degree to radian
     toRadian = (angle) ->

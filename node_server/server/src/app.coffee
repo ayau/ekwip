@@ -3,6 +3,7 @@ http       = require 'http'
 routes     = require './scripts/routes'
 {resp}     = require './scripts/response'
 io         = require 'socket.io'
+WebSocket  = require('ws')
 
 app = module.exports = express.createServer()
 
@@ -33,23 +34,48 @@ app.get '*', (req, res) -> resp.error res, resp.NOT_FOUND
 
 # clients
 clients = {}
+model = {}
+
+WebSocketServer = WebSocket.Server
+ws = new WebSocketServer({port: 8080})
+ws.on 'connection', (ws) ->
+    console.log("connected!")
+
+    ws.on 'message', (msg) ->
+        console.log('received: %s', msg)
+        try
+            model = JSON.parse(msg);
+        catch e
+            console.log "error parsing json"
+  
+    ws.send('something')
+
 
 # Socket IO
-io.listen(app.listen(8080), {'log level': 1}).sockets.on 'connection', (socket) ->
+socketio = io.listen(app.listen(8888), {'log level': 1});
+
+socketio.sockets.on 'connection', (socket) ->
   clients[socket.id] = socket
-  
+  console.log('connected! %s', socket.id)
   
   socket.emit 'connected',
     id: socket.id
-    # contents:
 
-  socket.on 'key', (data) ->
-    data.id = socket.id
+  # socket.on 'calibrate', (data) ->
+  #   console.log 'calibrate'
 
 
   socket.on 'disconnect', ->
+    console.log 'disconnected'
     delete clients[socket.id]
 
+respond = () ->
+  for id, client of clients
+    client.emit 'update', model
+
+gameLoop = (loopCode) -> setInterval loopCode, 30
+gameLoop ->
+  respond()
 
 # Heroku ports or 3000
 # port = process.env.PORT || 3000

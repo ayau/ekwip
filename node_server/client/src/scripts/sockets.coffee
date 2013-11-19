@@ -1,5 +1,6 @@
 class Ekwip.Sockets
-  constructor: () ->
+  constructor: (model) ->
+    @model = model
 
     @socket = io.connect "#{window.location.href}"
     @socket.on 'connected', (data) =>
@@ -7,11 +8,10 @@ class Ekwip.Sockets
       console.log data
       
     @socket.on 'update', (data) =>
-      @model.content = data.contents
+      @model.update(data)
 
-  emitHello: () =>
-    @socket.emit 'key',
-      payload: hello
+  # emitCalibrate: () =>
+  #   @socket.emit 'calibrate'
 
   getSocketId: =>
     @socket.socket.sessionid
