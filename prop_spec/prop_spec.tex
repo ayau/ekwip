@@ -1,0 +1,94 @@
+
+% Many thanks to Andrew West for writing most of this file
+% Main LaTeX file for CIS400/401 Project Proposal Specification
+%
+% Once built and in PDF form this document outlines the format of a
+% project proposal. However, in raw (.tex) form, we also try to
+% comment on some basic LaTeX technique. This is not intended to be a
+% LaTeX tutorial, instead just (1) a use-case thereof, and (2) a
+% template for your own writing.
+
+% Ordinarily we'd begin by specifying some broad document properties
+% like font-size, page-size, margins, etc. -- We have done this (and
+% much more) for you by creating a 'style file', which the
+% 'documentclass' command references.
+\documentclass{sig-alternate}
+ 
+% These 'usepackage' commands are a way of importing additional LaTeX
+% styles and formattings that aren't part of the 'standard library'
+\usepackage{mdwlist}
+\usepackage{url}
+
+\begin{document} 
+\nocite{*}
+% We setup the parameters to our title header before 'making' it. Note
+% that your proposals should have actual titles, not the generic one
+% we have here.
+\title{CIS400/401 Project Proposal Specification - eKwip}
+\subtitle{Dept. of CIS - Senior Design 2013-2014\thanks{Advisor: LeAnn Dourte (dourte@seas.upenn.edu).}}
+\numberofauthors{4}
+\author{
+\alignauthor Alex Yau \\ \email{ayau@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
+\alignauthor Jacy Clare \\ \email{jclare@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
+\and 
+\alignauthor Jeffrey Shih \\ \email{jeshih@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
+\alignauthor Kunal Mahajan \\ \email{mkunal@seas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA}
+\date{\today}
+\maketitle
+
+% Next we write out our abstract -- generally a two paragraph maximum,
+% executive summary of the motivation and contributions of the work.
+\begin{abstract}
+
+  \textit{This senior design project focuses on creating a electronic knee wrap for athletes to wear in order to determine their risk of suffering an Anterior Cruciate Ligament (ACL) injury. ACL injuries are among the most common injuries in sports. While there has been a lot of research into some of the possible factors that lead to ACL tears, the project will focus on a few factors and use those to come up with an algorithm to calculate an athlete's risk factor for an ACL injury.}
+
+  \textit{The aim is to come up with a project that will be able to replace the common techniques used by therapists and physicians to determine ACL risk and recovery. In addition, the project will also be multi-purpose, allowing both doctors to predict injuries and athletes prevent injuries on the field.}
+
+\end{abstract}
+
+% Then we proceed into the body of the report itself. The effect of
+% the 'section' command is obvious, but also notice 'label'. Its good
+% practice to label every (sub)-section, graph, equation etc. -- this
+% gives us a way to dynamically reference it later in the text via the
+% 'ref' command.
+\section{Introduction}
+\label{sec:intro}
+Anterior cruciate ligament (ACL) ruptures are one of the most common injuries in sport and very expensive to treat. There are approximately 175, 000 primary ACL reconstruction surgeries performed annually in the USA with an estimated cost of over \$2 billion US \cite{yu2007mechanisms}. This is followed by a lengthy rehabilitation period. Even then, over a quarter of patients reinjure their ACL \cite{stevenson1998gender}. An ACL injury can have a immense impact on an athelete's career and quality of life. Because of this, preventing ACL injuries is exceptionally valuable and important.
+
+This project proposes the use of an electronic knee wrap (eKwip), to predict and prevent ACL injuries in both healthy athletes and injured patients. By monitoring the angles, orientation and movements of the knee of the wearer, eKwip is able to predict when an injury is imminent. This will then trigger the prevention mechanism to cushion knee and prevent the knee from bending at angles that may cause an ACL rupture. To encourage adoption of such a knee wrap, eKwip is designed to be unobtrusive and flexible, unlike the current mechanical braces on the market.
+
+eKwip allows the wearer to monitor his or her knee performance and risk of injury throughout the day to decrease the chance of future injury. It also allows physical therapist to easily observe and assess the performance of injured patients remotely. With eKwip, this project aims to reduce the rate of ACL injuries in both healthy athletes and injured patients.
+
+% The header of this document might have been a little intimidatating
+% to beginners. Notice once you are in the body of the document,
+% however, LaTeX commands are minimal and 'normal text' is frequent.
+\section{Related Work}
+\label{sec:related_work}
+\input{sections/related.tex}
+
+\section{Project Proposal}
+\label{sec:project_proposal}
+\input{sections/proposal.tex}
+
+\subsection{Anticipated Approach}
+\label{subsec:approach}
+\input{sections/approach.tex}
+
+\subsection{Technical Challenges}
+\label{subsec:tech_challenges}
+\input{sections/challenges.tex}
+
+\subsection{Evaluation Criteria}
+\label{subsec:eval_criteria}
+\input{sections/evaluation.tex}
+
+\section{Research Timeline}
+\label{sec:research_timeline}
+\input{sections/timeline.tex}
+
+% We next move onto the bibliography.
+\bibliographystyle{plain} % Please do not change the bib-style
+\bibliography{sections/references}  % Just the *.BIB filename
+
+\end{document} 
+
