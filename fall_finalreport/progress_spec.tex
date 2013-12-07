@@ -46,6 +46,10 @@
 
 \end{abstract}
 
+\begin{keywords}
+	Anterior Cruciate Ligament (ACL),  Knee Flexion angles, Valgus forces
+\end{keywords}
+
 % Then we proceed into the body of the report itself. The effect of
 % the 'section' command is obvious, but also notice 'label'. Its good
 % practice to label every (sub)-section, graph, equation etc. -- this
@@ -53,7 +57,9 @@
 % 'ref' command.
 \section{Introduction}
 \label{sec:intro}
-ACL ruptures are one of the most common injuries in sport and very expensive to treat.There are approximately 175, 000 primary ACL reconstruction surgeries performed annually in the USA with an estimated cost of over \$2 billion US \cite{yu2007mechanisms}. This is followed by a lengthy rehabilitation period. Even then, over a quarter of patients reinjure their ACL \cite{stevenson1998gender}. An ACL injury can have an immense impact on an athelete's career and quality of life. Because of this, preventing ACL injuries is exceptionally valuable and important.
+ACL ruptures are one of the most common injuries in sport and very expensive to treat.There are approximately 175, 000 primary ACL reconstruction surgeries performed annually in the USA with an estimated cost of over \$2 billion US \cite{yu2007mechanisms}. This is followed by a lengthy rehabilitation period. Even then, over a quarter of patients reinjure their ACL \cite{stevenson1998gender}. These injuries cause early-onset of osteoarthritis for numerous people between the ages of 30 and 50 \FIXME(CITE Lohmander et al)
+
+An ACL injury can have an immense impact on an athelete's career and quality of life. Because of this, preventing ACL injuries is exceptionally valuable and important.
 
 We propose the use of an electronic knee wrap (eKwip), to predict and prevent ACL injuries in both healthy athletes and injured patients. By monitoring the angles, orientation and movements of the knee of the wearer, eKwip is able to predict when an injury is imminent. We propose to create a prevention mechanism to cushion knee and prevent the knee from bending at angles that may cause an ACL rupture. This mechanism will be triggered in case of imminent danger. To encourage adoption of such a knee wrap, eKwip is designed to be unobtrusive and flexible, unlike the current mechanical braces on the market.
 
@@ -61,6 +67,7 @@ eKwip allows the wearer to monitor his or her knee performance and risk of injur
 
 eKwip utilizes various factors that have been demonstrated to cause the injury such as accelerations and angles. It integrates these factors with machine learning algorithm to accurately calculate the risk by adapting to the athlete's physical characteristics such as flexiblity and normal range of knee movement. Currently, the microcontroller (Mbed) receive knee acceleration and orientation angles from the sensors. Using a wireless module, this data is quickly transmitted to the server, which calibrates the angles and acceleration, and displays them on the website in a user friendly format.
 
+\FIXME{Talk briefly about all the sections}
 % The header of this document might have been a little intimidatating
 % to beginners. Notice once you are in the body of the document,
 % however, LaTeX commands are minimal and 'normal text' is frequent.
@@ -72,25 +79,21 @@ eKwip utilizes various factors that have been demonstrated to cause the injury s
 \label{sec:related_work}
 \input{sections/related.tex}
 
-\section{Project Proposal}
-\label{sec:project_proposal}
-\input{sections/proposal.tex}
+\section{System Model}
+\label{sec:system_model}
+\input{sections/model.tex}
 
-\subsection{Anticipated Approach}
-\label{subsec:approach}
-\input{sections/approach.tex}
+\subsection{System Implementation}
+\label{subsec:system_implementation}
+\input{sections/implementation.tex}
 
-\subsection{Technical Challenges}
-\label{subsec:tech_challenges}
-\input{sections/challenges.tex}
+\subsection{System Performance}
+\label{subsec:system_performance}
+\input{sections/performance.tex}
 
-\subsection{Evaluation Criteria}
-\label{subsec:eval_criteria}
-\input{sections/evaluation.tex}
-
-\section{Research Timeline}
-\label{sec:research_timeline}
-\input{sections/timeline.tex}
+\subsection{Remaining Work}
+\label{subsec:remaining_work}
+\input{sections/remainingWork.tex}
 
 % We next move onto the bibliography.
 \bibliographystyle{plain} % Please do not change the bib-style
