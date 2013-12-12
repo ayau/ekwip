@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 DEC 2013 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 DEC 2013 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -299,19 +299,12 @@ Overfull \hbox (1.78941pt too wide) in paragraph at lines 66--67
 x/updmap/pdftex.map}
 
 
-]
+] <images/acl_anatomy.png, id=12, 372.39125pt x 285.065pt>
+File: images/acl_anatomy.png Graphic file (type png)
 
-! LaTeX Error: Unknown graphics extension: .bmp.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...graphics[width=3in]{images/acl_anatomy.bmp}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<use images/acl_anatomy.png>
+Package pdftex.def Info: images/acl_anatomy.png used on input line 6.
+(pdftex.def)             Requested size: 216.81pt x 165.97287pt.
 ) (./sections/related.tex
 Overfull \hbox (1.19249pt too wide) in paragraph at lines 1--2
 \T1/aer/m/n/9 al-go-rithms for ACL in-jury de-tec-tion (Sec-tion 2.1), knee bra
@@ -323,14 +316,17 @@ Overfull \hbox (11.94951pt too wide) in paragraph at lines 5--5
 []\secfnt Knee Brace Ef-fec-tive-ness/ Per-for-mance Hin-
  []
 
-<images/flexangle.PNG, id=12, 453.49425pt x 346.29375pt>
+<images/flexangle.PNG, id=13, 453.49425pt x 346.29375pt>
 File: images/flexangle.PNG Graphic file (type png)
 
 <use images/flexangle.PNG>
 Package pdftex.def Info: images/flexangle.PNG used on input line 12.
 (pdftex.def)             Requested size: 216.81pt x 165.5586pt.
 
-<images/quadforce.PNG, id=14, 466.74374pt x 346.29375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/quadforce.PNG, id=15, 466.74374pt x 346.29375pt>
 File: images/quadforce.PNG Graphic file (type png)
 
 <use images/quadforce.PNG>
@@ -340,35 +336,47 @@ Package pdftex.def Info: images/quadforce.PNG used on input line 20.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./sections/model.tex) (./sections/implementation.tex [2 <./images/flexangle.
-PNG>] [3 <./images/quadforce.PNG>]) (./sections/performance.tex)
-(./sections/remainingWork.tex) (./progress_spec.bbl [4]) [5
+) (./sections/model.tex [2 <./images/acl_anatomy.png (PNG copy)>]
+<images/block_diagram.PNG, id=21, 446.26724pt x 310.15875pt>
+File: images/block_diagram.PNG Graphic file (type png)
 
-]
-(./progress_spec.aux) ) 
+<use images/block_diagram.PNG>
+Package pdftex.def Info: images/block_diagram.PNG used on input line 11.
+(pdftex.def)             Requested size: 216.81pt x 150.68237pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/implementation.tex [3 <./images/flexangle.PNG> <./images/quadforc
+e.PNG> <./images/block_diagram.PNG>]) (./sections/performance.tex)
+(./sections/remainingWork.tex) (./progress_spec.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4])
+[5] (./progress_spec.aux) ) 
 Here is how much of TeX's memory you used:
- 2934 strings out of 493315
- 37734 string characters out of 6137904
- 102436 words of memory out of 5000000
- 6286 multiletter control sequences out of 15000+600000
+ 2943 strings out of 493315
+ 37983 string characters out of 6137904
+ 102444 words of memory out of 5000000
+ 6294 multiletter control sequences out of 15000+600000
  50351 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,10n,28p,1296b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base
-/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on progress_spec.pdf (5 pages, 205098 bytes).
+ 41i,10n,28p,1296b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on progress_spec.pdf (5 pages, 363889 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
