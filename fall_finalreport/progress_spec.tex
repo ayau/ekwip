@@ -13,13 +13,13 @@
 % much more) for you by creating a 'style file', which the
 % 'documentclass' command references.
 \documentclass{sig-alternate}
- 
+
 % These 'usepackage' commands are a way of importing additional LaTeX
 % styles and formattings that aren't part of the 'standard library'
 \usepackage{mdwlist}
 \usepackage{url}
 
-\begin{document} 
+\begin{document}
 \nocite{*}
 % We setup the parameters to our title header before 'making' it. Note
 % that your proposals should have actual titles, not the generic one
@@ -30,7 +30,7 @@
 \author{
 \alignauthor Alex Yau \\ \email{ayau@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
 \alignauthor Jacy Clare \\ \email{jclare@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
-\and 
+\and
 \alignauthor Jeffrey Shih \\ \email{jeshih@sas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA
 \alignauthor Kunal Mahajan \\ \email{mkunal@seas.upenn.edu} \\ Univ. of Pennsylvania \\ Philadelphia, PA}
 \date{\today}
@@ -83,20 +83,20 @@ Sec.2 reviews knee anatomy, including the major causes of ACL injuries and the p
 \input{sections/model.tex}
 
 \section{System Implementation}
-\label{subsec:system_implementation}
+\label{sec:system_implementation}
 \input{sections/implementation.tex}
 
 \section{System Performance}
-\label{subsec:system_performance}
+\label{sec:system_performance}
 \input{sections/performance.tex}
 
 \section{Remaining Work}
-\label{subsec:remaining_work}
+\label{sec:remaining_work}
 \input{sections/remainingWork.tex}
 
 % We next move onto the bibliography.
 \bibliographystyle{plain} % Please do not change the bib-style
 \bibliography{sections/references}  % Just the *.BIB filename
 
-\end{document} 
+\end{document}
 
