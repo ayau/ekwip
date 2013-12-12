@@ -42,13 +42,19 @@ ws.on 'connection', (ws) ->
     console.log("connected!")
 
     ws.on 'message', (msg) ->
-        console.log('received: %s', msg)
-        try
-            model = JSON.parse(msg);
-        catch e
-            console.log "error parsing json"
-  
-    ws.send('something')
+        # console.log('%d received: %s', new Date().getTime(), msg)
+        msg = msg.substr(0, msg.length - 1)
+        msg = msg.split(" ")
+        console.log(msg)
+        if msg.length == 6
+          model =
+            "roll_1": parseInt(msg[0])
+            "pitch_1": parseInt(msg[1])
+            "yaw_1": parseInt(msg[2])
+            "roll_2": parseInt(msg[3])
+            "pitch_2": parseInt(msg[4])
+            "yaw_2": parseInt(msg[5])
+    # ws.send('something')
 
 
 # Socket IO
