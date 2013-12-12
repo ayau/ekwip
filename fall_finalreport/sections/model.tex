@@ -1,4 +1,7 @@
-Talk briefly in high level about the model.
-Include the flow chart that we made.
-talk about how stuff interacts
-avoid lot of technical implementation in this section as the next section talks about the implementation in detail
+eKwip consists of several components that all work together to collect data about the position and motion of the knee and leg, store the data locally, send the data over a wireless network link to a server, and analyze the data in order to display an image of the knee and compute a KIRI score.
+
+The process begins in the IMU sensors, which use accelerometers and gyroscopes to measure the absolute orientation, acceleration, and rate of change of acceleration. This data is passed to the microcontroller, which packetizes the data and send it to the wireless module, which transmits the data packets over the wireless network to the server.
+
+The server receives the data packets and parses the data. It then computes the position and movement of the knee in order to display the image of the leg in the graphical user interface. Additionally, the server will compute the KIRI score for the individual and display that value.
+
+Figure X shows a block diagram modelling the eKwip system.
