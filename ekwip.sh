@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/ekwip.pem ubuntu@54.201.26.223 "cd ekwip/node_server; ./script.sh"
