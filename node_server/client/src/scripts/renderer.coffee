@@ -63,6 +63,7 @@ class Ekwip.Renderer
 
     render: =>
         @updateModel()
+        @updateDisplay()
         # @myPlayerPosition = @getMyPlayerPosition() #We need this to move the viewport
         @renderer.render @scene, @camera
 
@@ -147,4 +148,7 @@ class Ekwip.Renderer
     toRadian = (angle) ->
         return angle * Math.PI / 180
 
+
+    updateDisplay: =>
+        $('#display').html("<p>Upper leg x: " + @model.u.x + "</p>" + "<p>Upper leg y: " + @model.u.y + "</p>" + "<p>Upper leg z: " + @model.u.z + "</p>" + "<p>Lower leg x: " + @model.l.x + "</p>" + "<p>Lower leg y: " + @model.l.y + "</p>" + "<p>Lower leg z: " + @model.l.z + "</p>")
 

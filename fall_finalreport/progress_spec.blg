@@ -3,9 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: progress_spec.aux
 The style file: plain.bst
 Database file #1: sections/references.bib
+Warning--I didn't find a database entry for "conley2007female"
+Warning--I didn't find a database entry for "noyes2010knee"
 You've used 16 entries,
             2118 wiz_defined-function locations,
-            616 strings with 8031 characters,
+            618 strings with 8060 characters,
 and the built_in function-call counts, 6303 in all, are:
 = -- 595
 > -- 387
@@ -44,3 +46,4 @@ warning$ -- 0
 while$ -- 54
 width$ -- 18
 write$ -- 178
+(There were 2 warnings)
