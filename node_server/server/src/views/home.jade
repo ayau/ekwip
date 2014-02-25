@@ -1,8 +1,43 @@
 link(rel='stylesheet', href='/assets/stylesheets/home.css')
-h1 eKwip
-#btn-calibrate Calibrate
-#display
-#GLCanvas
+#GLContainer 
+    #title
+        h1.title eKwip
+        h3.subtitle a project by Alex Yau, Jacy Clare, Jeff Shih and Kunal Mahajan
+    #display
+        #btn-calibrate Calibrate
+        #rt-measurements
+    #GLCanvas
+
+#Stats
+    img(src="http://alexyoung.org/images/good_graph.png")#graph
+    #measurements
+        h3 Angles
+        ul
+            li Upper leg x: 0
+            li Upper leg y: 0
+            li Upper leg z: 0
+        ul
+            li Lower leg x: 0
+            li Lower leg y: 0
+            li Lower leg z: 0
+        h3 Rate of change of angles
+        ul
+            li Upper leg x: 0
+            li Upper leg y: 0
+            li Upper leg z: 0
+        ul
+            li Lower leg x: 0
+            li Lower leg y: 0
+            li Lower leg z: 0
+        h3 Acceleration
+        ul
+            li Upper leg x: 0
+            li Upper leg y: 0
+            li Upper leg z: 0
+        ul
+            li Lower leg x: 0
+            li Lower leg y: 0
+            li Lower leg z: 0
 
 script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
 script(type='text/javascript', src='/socket.io/socket.io.js?body=0')

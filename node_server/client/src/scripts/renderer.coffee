@@ -72,9 +72,10 @@ class Ekwip.Renderer
         @controls.update()
 
     measure: =>
-
-        windowWidth = window.innerWidth
-        windowHeight = window.innerHeight
+        windowWidth = $('#GLContainer').innerWidth()
+        windowHeight = $('#GLContainer').innerHeight()
+        # windowWidth = window.innerWidth
+        # windowHeight = window.innerHeight
 
         @renderer.setSize windowWidth, windowHeight
         @camera.aspect = windowWidth/windowHeight
@@ -150,5 +151,5 @@ class Ekwip.Renderer
 
 
     updateDisplay: =>
-        $('#display').html("<p>Upper leg x: " + @model.u.x + "</p>" + "<p>Upper leg y: " + @model.u.y + "</p>" + "<p>Upper leg z: " + @model.u.z + "</p>" + "<p>Lower leg x: " + @model.l.x + "</p>" + "<p>Lower leg y: " + @model.l.y + "</p>" + "<p>Lower leg z: " + @model.l.z + "</p>")
+        $('#rt-measurements').html("<p>Upper leg x: " + @model.u.x + "</p>" + "<p>Upper leg y: " + @model.u.y + "</p>" + "<p>Upper leg z: " + @model.u.z + "</p>" + "<p>Lower leg x: " + @model.l.x + "</p>" + "<p>Lower leg y: " + @model.l.y + "</p>" + "<p>Lower leg z: " + @model.l.z + "</p>")
 
