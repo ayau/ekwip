@@ -27,12 +27,12 @@ class Ekwip.Model
             @l.y = -1*data.yaw_1 + @offset.l.y
         if data.roll_1
             @l.z = data.roll_1 + @offset.l.z
-        if data.roll_2
-            @u.x = data.roll_2 + @offset.u.x
+        if data.pitch_2
+            @u.x = data.pitch_2 + @offset.u.x
         if data.yaw_2
             @u.y = -1*data.yaw_2 + @offset.u.y
-        if data.pitch_2
-            @u.z = -1*data.pitch_2 + @offset.u.z
+        if data.roll_2
+            @u.z = data.roll_2 + @offset.u.z
 
     calibrate: =>
         @offset.u.x -= @u.x
