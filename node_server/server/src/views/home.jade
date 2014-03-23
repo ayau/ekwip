@@ -6,6 +6,15 @@ link(rel='stylesheet', href='/assets/stylesheets/home.css')
     #display
         #btn-calibrate Calibrate
         #rt-measurements
+    #sessions
+        h3 Recordings
+        ul#recordings
+            - for (var i=0; i<files.length; i++)
+                li
+                    a(href='/download?n=' + files[i])= files[i]
+        p#record-hint Recording..
+        input#input-record(type='text' placeholder='Recording name')
+        #btn-record Record
     #GLCanvas
 
 #Stats

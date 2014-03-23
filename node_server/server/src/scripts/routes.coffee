@@ -1,4 +1,6 @@
+fs = require('fs')
 
 # home page
 exports.index = (req, res) ->
-    res.render 'home', {title: "ekwip"}
+    fs.readdir 'recordings/', (err, _files) ->
+        res.render 'home', {title: "ekwip", files: _files}

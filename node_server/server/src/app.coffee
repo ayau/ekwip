@@ -4,6 +4,8 @@ routes     = require './scripts/routes'
 {resp}     = require './scripts/response'
 io         = require 'socket.io'
 WebSocket  = require('ws')
+{storage}  = require './scripts/storage'
+{model}    = require './scripts/model'
 
 app = module.exports = express.createServer()
 
@@ -29,12 +31,14 @@ app.configure 'production', ->
 
 # Routes
 app.get '/', routes.index
+app.get '/download', (req, res) ->
+  file = 'recordings/' + req.query.n
+  res.download(file)
 app.get '*', (req, res) -> resp.error res, resp.NOT_FOUND
 
 
 # clients
 clients = {}
-model = {}
 
 WebSocketServer = WebSocket.Server
 ws = new WebSocketServer({port: 8080})
@@ -47,15 +51,16 @@ ws.on 'connection', (ws) ->
         msg = msg.split(" ")
         console.log(msg)
         if msg.length == 6
-          model =
+          m =
             "roll_1": parseInt(msg[0])
             "pitch_1": parseInt(msg[1])
             "yaw_1": parseInt(msg[2])
             "roll_2": parseInt(msg[3])
             "pitch_2": parseInt(msg[4])
             "yaw_2": parseInt(msg[5])
+          model.update(m)
+          storage.store model.data(), new Date().getTime()
     # ws.send('something')
-
 
 # Socket IO
 socketio = io.listen(app.listen(8888), {'log level': 1});
@@ -67,9 +72,14 @@ socketio.sockets.on 'connection', (socket) ->
   socket.emit 'connected',
     id: socket.id
 
-  # socket.on 'calibrate', (data) ->
-  #   console.log 'calibrate'
+  socket.on 'calibrate', ->
+    model.calibrate()
 
+  socket.on 'record', (name) ->
+    storage.record name
+
+  socket.on 'record_stop', ->
+    storage.stop()
 
   socket.on 'disconnect', ->
     console.log 'disconnected'
@@ -77,11 +87,12 @@ socketio.sockets.on 'connection', (socket) ->
 
 respond = () ->
   for id, client of clients
-    client.emit 'update', model
+    client.emit 'update', model.data()
 
 gameLoop = (loopCode) -> setInterval loopCode, 30
 gameLoop ->
   respond()
+
 
 # Heroku ports or 3000
 # port = process.env.PORT || 3000

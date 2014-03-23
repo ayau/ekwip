@@ -10,8 +10,14 @@ class Ekwip.Sockets
     @socket.on 'update', (data) =>
       @model.update(data)
 
-  # emitCalibrate: () =>
-  #   @socket.emit 'calibrate'
+  emitCalibrate: () =>
+    @socket.emit 'calibrate'
+
+  emitRecording: (name) =>
+    @socket.emit 'record', name
+
+  stopRecording: () =>
+    @socket.emit 'record_stop'
 
   getSocketId: =>
     @socket.socket.sessionid
