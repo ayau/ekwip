@@ -7,3 +7,5 @@ npm-debug.log
 
 server/gen
 client/gen
+
+recordings/*
