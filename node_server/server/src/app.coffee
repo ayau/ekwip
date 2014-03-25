@@ -49,7 +49,6 @@ ws.on 'connection', (ws) ->
         # console.log('%d received: %s', new Date().getTime(), msg)
         msg = msg.substr(0, msg.length - 1)
         msg = msg.split(" ")
-        console.log(msg)
         if msg.length == 6
           m =
             "roll_1": parseInt(msg[0])
