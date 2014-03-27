@@ -151,5 +151,7 @@ class Ekwip.Renderer
 
 
     updateDisplay: =>
-        $('#rt-measurements').html("<p>Upper leg x: " + @model.u.x + "</p>" + "<p>Upper leg y: " + @model.u.y + "</p>" + "<p>Upper leg z: " + @model.u.z + "</p>" + "<p>Lower leg x: " + @model.l.x + "</p>" + "<p>Lower leg y: " + @model.l.y + "</p>" + "<p>Lower leg z: " + @model.l.z + "</p>")
+        $('#rt-measurements-angle').html("<p><b>Angles</b></p><p>Upper leg x: " + @model.u.x + "</p>" + "<p>Upper leg y: " + @model.u.y + "</p>" + "<p>Upper leg z: " + @model.u.z + "</p>" + "<p>Lower leg x: " + @model.l.x + "</p>" + "<p>Lower leg y: " + @model.l.y + "</p>" + "<p>Lower leg z: " + @model.l.z + "</p>")
+        $('#rt-measurements-angle-rate').html("<p><b>Angle rates</b></p><p>Upper leg x: " + @model.u.xr + "</p>" + "<p>Upper leg y: " + @model.u.yr + "</p>" + "<p>Upper leg z: " + @model.u.zr + "</p>" + "<p>Lower leg x: " + @model.l.xr + "</p>" + "<p>Lower leg y: " + @model.l.yr + "</p>" + "<p>Lower leg z: " + @model.l.zr + "</p>")
+        $('#rt-measurements-accel').html("<p><b>Acceleartion</b></p><p>Upper leg x: " + @model.u.ax + "</p>" + "<p>Upper leg y: " + @model.u.ay + "</p>" + "<p>Upper leg z: " + @model.u.az + "</p>" + "<p>Lower leg x: " + @model.l.ax + "</p>" + "<p>Lower leg y: " + @model.l.ay + "</p>" + "<p>Lower leg z: " + @model.l.az + "</p>")
 

@@ -70,8 +70,6 @@ ws.on 'connection', (ws) ->
             "accely_2": parseInt(msg[16])
             "accelz_2": parseInt(msg[17])
 
-          console.log(m)
-
           model.update(m)
           storage.store model.data(), new Date().getTime()
     # ws.send('something')
