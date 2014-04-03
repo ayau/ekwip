@@ -49,8 +49,7 @@ ws.on 'connection', (ws) ->
         # console.log('%d received: %s', new Date().getTime(), msg)
         msg = msg.substr(0, msg.length - 1)
         msg = msg.split(" ")
-        console.log(msg.length)
-        if msg.length == 18
+        if msg.length >= 18
           m =
             "roll_1": parseInt(msg[0])
             "pitch_1": parseInt(msg[1])
@@ -70,7 +69,6 @@ ws.on 'connection', (ws) ->
             "accelx_2": parseInt(msg[15])
             "accely_2": parseInt(msg[16])
             "accelz_2": parseInt(msg[17])
-          console.log(m)
           model.update(m)
           storage.store model.data(), new Date().getTime()
     # ws.send('something')
