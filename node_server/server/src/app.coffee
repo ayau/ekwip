@@ -103,13 +103,13 @@ socketio.sockets.on 'connection', (socket) ->
     console.log 'disconnected'
     delete clients[socket.id]
 
-# respond = () ->
-#   for id, client of clients
-#     client.emit 'update', model.data()
+respond = () ->
+  for id, client of clients
+    client.emit 'update', model.data()
 
-# gameLoop = (loopCode) -> setInterval loopCode, 30
-# gameLoop ->
-#   respond()
+gameLoop = (loopCode) -> setInterval loopCode, 30
+gameLoop ->
+  respond()
 
 
 # Heroku ports or 3000
