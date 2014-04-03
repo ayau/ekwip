@@ -21,7 +21,8 @@ class Ekwip.Model
             ay: 0
             az: 0
 
-    update: (data) =>
+    update: (data, time) =>
+        @time = time
         # console.log("x " + data.lx + " y " + data.ly + " z " + data.lz)
         if 'lx' of data
             @l.x = data.lx

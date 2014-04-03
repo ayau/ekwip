@@ -69,7 +69,7 @@ ws.on 'connection', (ws) ->
             "accelx_2": parseInt(msg[15])
             "accely_2": parseInt(msg[16])
             "accelz_2": parseInt(msg[17])
-          model.update(m)
+          model.update(m, new Date().getTime())
           storage.store model.data(), new Date().getTime()
     # ws.send('something')
 
@@ -97,9 +97,10 @@ socketio.sockets.on 'connection', (socket) ->
     delete clients[socket.id]
 
 respond = () ->
-  console.log(model.data())
+  console.log("1")
   for id, client of clients
     client.emit 'update', model.data()
+  console.log("2")
 
 gameLoop = (loopCode) -> setInterval loopCode, 30
 gameLoop ->
