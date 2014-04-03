@@ -69,8 +69,11 @@ ws.on 'connection', (ws) ->
             "accelx_2": parseInt(msg[15])
             "accely_2": parseInt(msg[16])
             "accelz_2": parseInt(msg[17])
+          console.log("1")
           model.update(m, new Date().getTime())
+          console.log("2")
           storage.store model.data(), new Date().getTime()
+          console.log("3")
     # ws.send('something')
 
 # Socket IO
