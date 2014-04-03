@@ -97,10 +97,8 @@ socketio.sockets.on 'connection', (socket) ->
     delete clients[socket.id]
 
 respond = () ->
-  console.log("1")
   for id, client of clients
     client.emit 'update', model.data()
-  console.log("2")
 
 gameLoop = (loopCode) -> setInterval loopCode, 30
 gameLoop ->
