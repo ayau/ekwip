@@ -46,10 +46,10 @@ ws.on 'connection', (ws) ->
     console.log("connected!")
 
     ws.on 'message', (msg) ->
-        console.log('%d received: %s', new Date().getTime(), msg)
+        # console.log('%d received: %s', new Date().getTime(), msg)
         msg = msg.substr(0, msg.length - 1)
         msg = msg.split(" ")
-        if msg.length == 6
+        if msg.length == 18
           m =
             "roll_1": parseInt(msg[0])
             "pitch_1": parseInt(msg[1])
