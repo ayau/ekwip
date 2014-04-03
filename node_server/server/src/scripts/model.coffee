@@ -29,9 +29,12 @@ exports.model =
             x: 0
             y: 0
             z: 0
+    time: 0
         
-    update: (data) ->
+    update: (data, time) ->
         # console.log("roll1 " + data.roll_1 + " yaw_1 " + data.yaw_1 + " pitch_1 " + data.pitch_1)
+        if time
+            @time = time
         if data.pitch_1
             @l.x = data.pitch_1 + @offset.l.x
         if data.yaw_1
