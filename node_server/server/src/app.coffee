@@ -97,6 +97,7 @@ socketio.sockets.on 'connection', (socket) ->
     delete clients[socket.id]
 
 respond = () ->
+  console.log(model.data())
   for id, client of clients
     client.emit 'update', model.data()
 
