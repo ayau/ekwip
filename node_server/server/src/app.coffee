@@ -46,7 +46,7 @@ ws.on 'connection', (ws) ->
     console.log("connected!")
 
     ws.on 'message', (msg) ->
-        # console.log('%d received: %s', new Date().getTime(), msg)
+        console.log('%d received: %s', new Date().getTime(), msg)
         msg = msg.substr(0, msg.length - 1)
         msg = msg.split(" ")
         if msg.length == 6
