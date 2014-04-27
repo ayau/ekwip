@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: progress_spec.aux
+The style file: plain.bst
+Database file #1: sections/references.bib
+Warning--I didn't find a database entry for "conley2007female"
+Warning--I didn't find a database entry for "noyes2010knee"
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            618 strings with 8060 characters,
+and the built_in function-call counts, 6303 in all, are:
+= -- 595
+> -- 387
+< -- 0
++ -- 156
+- -- 136
+* -- 546
+:= -- 1087
+add.period$ -- 49
+call.type$ -- 16
+change.case$ -- 116
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 172
+empty$ -- 428
+format.name$ -- 136
+if$ -- 1250
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 84
+num.names$ -- 32
+pop$ -- 89
+preamble$ -- 1
+purify$ -- 100
+quote$ -- 0
+skip$ -- 116
+stack$ -- 0
+substring$ -- 430
+swap$ -- 16
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 0
+while$ -- 54
+width$ -- 18
+write$ -- 178
+(There were 2 warnings)
