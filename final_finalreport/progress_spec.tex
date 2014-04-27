@@ -40,15 +40,11 @@
 % executive summary of the motivation and contributions of the work.
 \begin{abstract}
 
-  \textit{This research focuses on creating a electronic knee wrap for athletes to wear in order to determine their risk of suffering an Anterior Cruciate Ligament (ACL) injury. While significant research has been conducted for identifying the factors responsible for an ACL injury, there is a need to quantitatively determine an athlete's risk of suffering the injury in order to determine if an athlete is fit to return to sports. To this end, this reserach explores the opportunity to mount a high performance, small area circuit on a knee wrap. A set of factors such as knee acceleration, knee orientation and valgus forces are integrated to compute the risk percentage of an athlete in real time. In addition, this knee wrap will also be multi-purpose, allowing both doctors to predict injuries and athletes prevent injuries on the field.}
+  \textit{This research focuses on creating a electronic knee wrap for athletes to wear in order to monitor the motion of their knees to reduce the risk of suffering an Anterior Cruciate Ligament (ACL) injury or reinjury. While significant research has been conducted for identifying the factors responsible for an ACL injury, there is a need to quantitatively determine an athlete's risk of suffering the injury in order to determine if an athlete is fit to return to sports. To this end, this reserach explores the opportunity to mount a high performance, small area circuit on a knee wrap. A set of factors that are important to the calculation of an athelete's risk of a future knee injury, such as knee acceleration, knee orientation and valgus forces, is collected from the knee wrap in real time. In addition, this knee wrap will also be multi-purpose, allowing both doctors to monitor an athelete's recovery remotely and coaches to observe an athelete's performance on the field.}
 
-  \textit{The design incorporates microcontrollers, inertial measurement units and wireless module mounted on the knee wrap. In order for the therapists and physicians to interact with the data, a server and a front-end web interface is implemented to display the data. Further benchmarking shows that the sensors measure accurate data at 110Hz frequency, successfully transmit to the server and display the data.}
+  \textit{The design incorporates microcontrollers, inertial measurement units and wireless module mounted on the knee wrap. In order for the therapists and physicians to interact with the data, a server and a front-end web interface is implemented to display the data.}
 
 \end{abstract}
-
-\begin{keywords}
-	Anterior Cruciate Ligament (ACL),  Knee Flexion angle, Deceleration, Knee Injury Risk Index (KIRI)
-\end{keywords}
 
 % Then we proceed into the body of the report itself. The effect of
 % the 'section' command is obvious, but also notice 'label'. Its good
@@ -57,15 +53,15 @@
 % 'ref' command.
 \section{Introduction}
 \label{sec:intro}
-ACL ruptures are one of the most common injuries in sport and very expensive to treat.There are approximately 175, 000 primary ACL reconstruction surgeries performed annually in the USA with an estimated cost of over \$2 billion US \cite{yu2007mechanisms}. This is followed by a lengthy rehabilitation period. Even then, over a quarter of patients reinjure their ACL \cite{stevenson1998gender}. These injuries also cause early-onset of osteoarthritis for numerous people between the ages of 30 and 50, and related injuries such as ACL tear in the other leg. \cite{2d7e8810e30d11dd990c000ea68e967b}
+ACL ruptures are one of the most common injuries in sport and very expensive to treat.There are approximately 175, 000 primary ACL reconstruction surgeries performed annually in the USA with an estimated cost of over \$2 billion US~\cite{yu2007mechanisms}. This is followed by a lengthy rehabilitation period. Even then, over a quarter of patients reinjure their ACL~\cite{stevenson1998gender}. These injuries also cause early-onset of osteoarthritis for numerous people between the ages of 30 and 50, and related injuries such as ACL tear in the other leg.~\cite{2d7e8810e30d11dd990c000ea68e967b}
 
 An ACL injury can have an immense impact on an athelete's career and quality of life. Because of this, monitoring and reducing the risk of ACL injuries is exceptionally valuable and important. This research proposes the use of an electronic knee wrap (eKwip), to predict and prevent ACL injuries in both healthy athletes and injured patients. By monitoring the angles, orientation and movements of the knee of the wearer, eKwip is able to predict when an injury is imminent. This research also proposes to create a Knee Injury Risk Index (KIRI) that the wrap will use to predict the risk of ACL injury. To encourage adoption of such a knee wrap, eKwip is designed to be unobtrusive and flexible, unlike the current mechanical braces on the market.
 
 eKwip allows the wearer to monitor his or her knee performance and risk of injury throughout the day to decrease the chance of future injury. It also allows physical therapist to easily observe and assess the performance of injured patients remotely. With eKwip, the aim is to reduce the rate of ACL injuries in both healthy athletes and injured patients.
 
-eKwip utilizes various factors that have been demonstrated to cause the injury such as accelerations and angles. It integrates these factors with machine learning algorithm to accurately calculate the risk by adapting to the athlete's physical characteristics such as flexiblity and normal range of knee movement. Currently, the microcontroller receive knee acceleration and orientation angles from the sensors. Using a wireless module, this data is quickly transmitted to the server, which calibrates the angles and acceleration, and displays them on the website in a user friendly format.
+eKwip utilizes various factors that have been demonstrated to cause the injury such as accelerations and angles. It integrates these factors with machine learning algorithm to accurately calculate the risk by adapting to the athlete's physical characteristics such as flexiblity and normal range of knee movement. Currently, the microcontroller receives knee acceleration and orientation angles from the sensors. Using a wireless module, this data is quickly transmitted to the server, which calibrates the angles and acceleration, and displays them on the website in a user friendly format.
 
-Sec.2 reviews knee anatomy, including the major causes of ACL injuries and the performance requirement of eKwip. Then, Sec.3 discusses the prior work in ACL detection and the common rehabilation procedures used in the industry for measuring the strength of the ACL. Sec.4 illustrates the basic idea of eKwip with the model diagram. Sec.5 describes the technical implementation of eKwip in detail. As real-time analysis is a necessary component, Sec.6 describes the performance of the system with respect to requirements and how the system improved over time. Sec.7 details the remaining work that involves implementation of KIRI algorithm, machine learning implementation, and testing and validating the system. Throughout the paper, we focus on latency and unobtrusiveness of the wrap.
+Sec. 2 reviews knee anatomy, including the major causes of ACL injuries and the performance requirement of eKwip. Then, Sec. 3 discusses the prior work in ACL detection and the common rehabilation procedures used in the industry for measuring the strength of the ACL. Sec. 4 illustrates the basic idea of eKwip with the model diagram. Sec. 5 describes the technical implementation of eKwip in detail. As real-time analysis is a necessary component, Sec. 6 describes the performance of the system with respect to requirements and how the system improved over time. Sec. 7 details the remaining work that involves implementation of KIRI algorithm, machine learning implementation, and testing and validating the system. Throughout the paper, we focus on latency and unobtrusiveness of the wrap.
 
 % The header of this document might have been a little intimidatating
 % to beginners. Notice once you are in the body of the document,
@@ -90,9 +86,13 @@ Sec.2 reviews knee anatomy, including the major causes of ACL injuries and the p
 \label{sec:system_performance}
 \input{sections/performance.tex}
 
-\section{Remaining Work}
-\label{sec:remaining_work}
-\input{sections/remainingWork.tex}
+\section{Results}
+\label{sec:results}
+\input{sections/results.tex}
+
+\section{Future Work}
+\label{sec:future_work}
+\input{sections/futurework.tex}
 
 % We next move onto the bibliography.
 \bibliographystyle{plain} % Please do not change the bib-style

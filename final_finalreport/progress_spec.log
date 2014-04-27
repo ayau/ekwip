@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 DEC 2013 18:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  26 APR 2014 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,12 +285,12 @@ a-sure-
  []
 
 
-Overfull \hbox (6.90987pt too wide) in paragraph at lines 62--63
+Overfull \hbox (6.90987pt too wide) in paragraph at lines 58--59
 []\T1/aer/m/n/9 An ACL in-jury can have an im-mense im-pact on an athelete's
  []
 
 
-Overfull \hbox (1.78941pt too wide) in paragraph at lines 66--67
+Overfull \hbox (1.78941pt too wide) in paragraph at lines 62--63
 []\T1/aer/m/n/9 eKwip uti-lizes var-i-ous fac-tors that have been demon-strated
 
  []
@@ -303,7 +303,7 @@ x/updmap/pdftex.map}
 File: images/acl_anatomy.png Graphic file (type png)
 
 <use images/acl_anatomy.png>
-Package pdftex.def Info: images/acl_anatomy.png used on input line 6.
+Package pdftex.def Info: images/acl_anatomy.png used on input line 7.
 (pdftex.def)             Requested size: 216.81pt x 165.97287pt.
 ) (./sections/related.tex
 Overfull \hbox (1.19249pt too wide) in paragraph at lines 1--2
@@ -316,28 +316,8 @@ Overfull \hbox (11.94951pt too wide) in paragraph at lines 5--5
 []\secfnt Knee Brace Ef-fec-tive-ness/ Per-for-mance Hin-
  []
 
-<images/flexangle.PNG, id=13, 453.49425pt x 346.29375pt>
-File: images/flexangle.PNG Graphic file (type png)
-
-<use images/flexangle.PNG>
-Package pdftex.def Info: images/flexangle.PNG used on input line 12.
-(pdftex.def)             Requested size: 216.81pt x 165.5586pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/quadforce.PNG, id=15, 466.74374pt x 346.29375pt>
-File: images/quadforce.PNG Graphic file (type png)
-
-<use images/quadforce.PNG>
-Package pdftex.def Info: images/quadforce.PNG used on input line 20.
-(pdftex.def)             Requested size: 216.81pt x 160.86111pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./sections/model.tex [2 <./images/acl_anatomy.png (PNG copy)>]
-<images/block_diagram.PNG, id=21, 446.26724pt x 310.15875pt>
+) (./sections/model.tex
+<images/block_diagram.PNG, id=13, 446.26724pt x 310.15875pt>
 File: images/block_diagram.PNG Graphic file (type png)
 
 <use images/block_diagram.PNG>
@@ -347,49 +327,39 @@ Package pdftex.def Info: images/block_diagram.PNG used on input line 11.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./sections/implementation.tex [3 <./images/flexangle.PNG> <./images/quadforc
-e.PNG> <./images/block_diagram.PNG>]) (./sections/performance.tex
-<images/graph.png, id=28, 868.24374pt x 444.66125pt>
+[2 <./images/acl_anatomy.png (PNG copy)>]) (./sections/implementation.tex
+[3 <./images/block_diagram.PNG>]) (./sections/performance.tex
+<images/graph.png, id=25, 868.24374pt x 444.66125pt>
 File: images/graph.png Graphic file (type png)
  <use images/graph.png>
-Package pdftex.def Info: images/graph.png used on input line 9.
+Package pdftex.def Info: images/graph.png used on input line 11.
 (pdftex.def)             Requested size: 216.81pt x 111.03612pt.
 )
-(./sections/remainingWork.tex
-
-LaTeX Warning: Citation `conley2007female' on page \thepage  undefined on input
- line 4.
-
-
-LaTeX Warning: Citation `noyes2010knee' on page \thepage  undefined on input li
-ne 4.
-
-[4 <./images/graph.png>]) (./progress_spec.bbl [5]) [6
-
-] (./progress_spec.aux) ) 
+(./sections/results.tex) (./sections/futurework.tex [4 <./images/graph.png>])
+(./progress_spec.bbl) [5] (./progress_spec.aux) ) 
 Here is how much of TeX's memory you used:
- 2952 strings out of 493315
- 38128 string characters out of 6137904
- 102456 words of memory out of 5000000
- 6302 multiletter control sequences out of 15000+600000
+ 2941 strings out of 493315
+ 37877 string characters out of 6137904
+ 102448 words of memory out of 5000000
+ 6290 multiletter control sequences out of 15000+600000
  50351 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,10n,28p,1296b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on progress_spec.pdf (6 pages, 438245 bytes).
+ 41i,10n,28p,1290b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf
+-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsl9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on progress_spec.pdf (5 pages, 371115 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
