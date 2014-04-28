@@ -5,8 +5,5 @@ In order to allow coaches to monitor the performance of athletes on the field an
 
 The Wifly is configured to send a packet each time a data point is received. This, along with an increased baud rate on the serial line between the mBed and the Wifly module, allowed for a wifi sampling rate of 100 Hz.
 
-\subsection {Micro SD Card}
-If no network is present, eKwip will log all the data that is being received to a Micro SD card so that the wearer can access their data in a later point. The Micro SD card reader will be attached to the mBed via UART serial. It will be written using a simple file format that will allow parsing of the data when in range of a wireless network. Alternatively, the Micro SD card can be removed and connected to a computer in order to import the data.
-
 \subsection {Server}
 The server is implemented with Node.js "!!! PLEASE CITE" and communicates with the eKwip wrap via websockets "!!! PLEASE CITE". Websockets is chosen in order to provide a stream of information from the wrap to the server. The server collects the data streamed from the wrap and in turns communicates to the front-end interface. "!!! EXPLAIN WHAT LOGIC" Some simple logic is implemented on the server to normalize and calibrate the data sent from the wrap, as well as filter out possible measurement errors. The front-end currently displays a 3D model of the knee given the data from eKwip with WebGL "!!!CITE". However, in the future, the front-end will also include additional information, show forces and acceleration on the knee model, as well as a graph showing the risk of ACL injury over the time that it was measured. This can allow patients and doctors to monitor the performance of the knee as well as observe the recovery of a patient overtime.
