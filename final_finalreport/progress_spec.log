@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  28 APR 2014 19:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 APR 2014 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -295,11 +295,15 @@ Overfull \hbox (1.78941pt too wide) in paragraph at lines 62--63
 
  []
 
-(./sections/background.tex [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdfte
-x/updmap/pdftex.map}
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] <images/acl_anatomy.png, id=12, 372.39125pt x 285.065pt>
+]
+(./sections/background.tex
+<images/acl_anatomy.png, id=12, 372.39125pt x 285.065pt>
 File: images/acl_anatomy.png Graphic file (type png)
 
 <use images/acl_anatomy.png>
@@ -316,50 +320,63 @@ Overfull \hbox (11.94951pt too wide) in paragraph at lines 5--5
 []\secfnt Knee Brace Ef-fec-tive-ness/ Per-for-mance Hin-
  []
 
-) (./sections/model.tex
-<images/block_diagram.PNG, id=13, 446.26724pt x 310.15875pt>
+) (./sections/model.tex [2 <./images/acl_anatomy.png (PNG copy)>]
+<images/block_diagram.PNG, id=19, 446.26724pt x 310.15875pt>
 File: images/block_diagram.PNG Graphic file (type png)
 
 <use images/block_diagram.PNG>
 Package pdftex.def Info: images/block_diagram.PNG used on input line 11.
 (pdftex.def)             Requested size: 216.81pt x 150.68237pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./images/acl_anatomy.png (PNG copy)>]) (./sections/implementation.tex)
-[3 <./images/block_diagram.PNG>] (./sections/performance.tex
+) (./sections/implementation.tex [3 <./images/block_diagram.PNG>]) (./sections/
+performance.tex
 <images/graph.png, id=25, 868.24374pt x 444.66125pt>
 File: images/graph.png Graphic file (type png)
  <use images/graph.png>
 Package pdftex.def Info: images/graph.png used on input line 11.
 (pdftex.def)             Requested size: 216.81pt x 111.03612pt.
 )
-(./sections/results.tex) (./sections/futurework.tex) [4 <./images/graph.png>]
-(./progress_spec.bbl) [5] (./progress_spec.aux) ) 
+(./sections/results.tex
+<images/results_graph.PNG, id=26, 753.81625pt x 432.61626pt>
+File: images/results_graph.PNG Graphic file (type png)
+
+<use images/results_graph.PNG>
+Package pdftex.def Info: images/results_graph.PNG used on input line 6.
+(pdftex.def)             Requested size: 252.94499pt x 145.16003pt.
+
+Overfull \hbox (12.94499pt too wide) in paragraph at lines 6--7
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/futurework.tex [4 <./images/graph.png> <./images/results_graph.PN
+G>]) (./progress_spec.bbl [5]) [6
+
+] (./progress_spec.aux) ) 
 Here is how much of TeX's memory you used:
- 2941 strings out of 493315
- 37877 string characters out of 6137904
- 101448 words of memory out of 5000000
- 6290 multiletter control sequences out of 15000+600000
+ 2948 strings out of 493315
+ 38040 string characters out of 6137904
+ 102464 words of memory out of 5000000
+ 6296 multiletter control sequences out of 15000+600000
  50351 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,10n,28p,1290b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf
--dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsl9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic
-/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
-.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on progress_spec.pdf (5 pages, 370375 bytes).
+ 41i,10n,28p,1290b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/ba
+se/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on progress_spec.pdf (6 pages, 424353 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
