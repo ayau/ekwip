@@ -1,6 +1,14 @@
-In order to correctly predict ACL injuries in real time, data must be collected at a certain frequency so that subtle movements and accelerations are captured in the data. "When the sensors were first integrated with the mBed, the rate at which data could be read was not fast enough. Therefore, problems in the library being used were identified and rectified."
+"Not sure where to put this"
+\subsection {Performance}
+In order to correctly predict ACL injuries in real time, data must be collected at a certain frequency so that subtle movements and accelerations are captured in the data. Data transfer speeds were a major concern throughout work on the project. Problems with the library used in data transfer were identified and rectified, allowing eKwip to trasmit the movements and acceleration data at useful speeds.
 
-"Another problem with the performance was the network latency. At first, the data was being transmitted over the network in discrete packets, each several seconds apart. It was determined that the wifi module was buffering the data until a large enough packet was received before transmitting the packet. This was mitigated by configuring the wifi module to send data after each receipt of a data packet. However, the transmission rate still was not fast enough, which required the shortening of the data string used to communicate each data point."
+Another issue with performance resulted from the WiFi module buffering data until the data packet was large enough to send.  Configuring the WiFi module to send data after receipt of each data packet as well as shortening the data string used to communicate each data point further increased transmission speed. These changes sped up the data presented on the server by about 14.5 percent, a major increase and critical for the different use cases of eKwip. 
+
+\subsection {Precision}
+As the purpose of eKwip is to be able to detect the minor nuances of a user’s various movements, precision of the data collected was a major concern. The initial version of the wrap, which was constructed with a recovery band bought from a pharmacy, was too thick and loose and placed the sensors too far away from the upper and lower leg. To increase accuracy, a new version of the wrap was constructed with thinner material. This decreased the average distance from the sensors to the upper by about 1centimeters and to the lower leg by .5 centimeters. These changes produced results far more accurate, which allowed calcualtions for flexion angles to be more precise. 
+
+\subection {Analysis of Data Collected}
+
 
 The improvements in data sampling and network transmission rates can be seen in Figure~\ref{fig:graph}.
 
@@ -10,7 +18,7 @@ The improvements in data sampling and network transmission rates can be seen in 
   \begin{center}
     \includegraphics[width=3in]{images/graph.png}
   \end{center}
-  \caption{Network and sensor performance of various eKwip prototypes}
+  \caption{Network and sensor performance of various eKwip "models?"}
   \label{fig:graph}
 \end{figure}
 
