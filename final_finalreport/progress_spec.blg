@@ -3,44 +3,57 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: progress_spec.aux
 The style file: plain.bst
 Database file #1: sections/references.bib
-You've used 16 entries,
+Warning--empty journal in websockets
+Warning--empty year in websockets
+Warning--empty journal in webgl
+Warning--empty year in webgl
+Warning--empty journal in mbed
+Warning--empty year in mbed
+Warning--empty journal in wifly
+Warning--empty year in wifly
+Warning--empty journal in node
+Warning--empty year in node
+Warning--empty journal in um6
+Warning--empty year in um6
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            615 strings with 8008 characters,
-and the built_in function-call counts, 6285 in all, are:
-= -- 593
-> -- 387
+            632 strings with 8215 characters,
+and the built_in function-call counts, 7481 in all, are:
+= -- 695
+> -- 429
 < -- 0
-+ -- 156
-- -- 136
-* -- 544
-:= -- 1085
-add.period$ -- 49
-call.type$ -- 16
-change.case$ -- 116
++ -- 175
+- -- 148
+* -- 610
+:= -- 1301
+add.period$ -- 61
+call.type$ -- 22
+change.case$ -- 140
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 172
-empty$ -- 426
-format.name$ -- 136
-if$ -- 1246
+cite$ -- 34
+duplicate$ -- 232
+empty$ -- 528
+format.name$ -- 148
+if$ -- 1474
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 15
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 89
+int.to.str$ -- 22
+missing$ -- 21
+newline$ -- 108
+num.names$ -- 44
+pop$ -- 137
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 118
 quote$ -- 0
-skip$ -- 116
+skip$ -- 152
 stack$ -- 0
-substring$ -- 424
+substring$ -- 455
 swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 0
-while$ -- 54
-width$ -- 18
-write$ -- 178
+type$ -- 88
+warning$ -- 12
+while$ -- 66
+width$ -- 24
+write$ -- 220
+(There were 12 warnings)

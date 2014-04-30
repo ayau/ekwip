@@ -27,6 +27,10 @@ Rafael~F Escamilla, Toran~D Macleod, Kevin~E Wilk, Lonnie Paulos, and James~R
 \newblock {\em The Journal of orthopaedic and sports physical therapy},
   42(3):208, 2012.
 
+\bibitem{websockets}
+Internet Engineering~Task Force.
+\newblock The websocket protocol.
+
 \bibitem{griffin}
 Letha Griffin, Julie Agel, Marjorie Albohm, Elizabeth Arendt, Randall Dick,
   William Garrett, James Garrick, Timothy Hewett, Laura Huston, Mary Ireland,
@@ -37,6 +41,10 @@ Letha Griffin, Julie Agel, Marjorie Albohm, Elizabeth Arendt, Randall Dick,
   prevention strategies.
 \newblock {\em Journal of the American Academy of Orthopaedic Surgeons},
   8(3):141 -- 150, 2000.
+
+\bibitem{webgl}
+Khronos Group.
+\newblock Opengl es 2.0 for the web.
 
 \bibitem{hewett2010acl}
 Timothy~E Hewett and Darren~L Johnson.
@@ -60,11 +68,23 @@ Smart Materials~Laboratory Limited.
   injuries: osteoarthritis.
 \newblock {\em American Journal of Sports Medicine}, 35(10):1756--69, 2007.
 
+\bibitem{mbed}
+mBed.
+\newblock mbed lpc1768.
+
+\bibitem{wifly}
+Microchip.
+\newblock Embedded wifi.
+
 \bibitem{Myer01042011}
 Gregory~D Myer, Kevin~R Ford, and Timothy~E Hewett.
 \newblock New method to identify athletes at high risk of {ACL} injury using
   clinic-based measurements and freeware computer analysis.
 \newblock {\em British Journal of Sports Medicine}, 45(4):238--244, 2011.
+
+\bibitem{node}
+Node.js.
+\newblock Node.js.
 
 \bibitem{pflum2004model}
 MARY~A Pflum, KEVIN~B Shelburne, MICHAEL~R Torry, MICHAEL~J Decker, and
@@ -80,6 +100,10 @@ Neetu Rishiraj, JackE. Taunton, Robert Lloyd-Smith, Robert Woollard, William
 \newblock The potential role of prophylactic / {Functional} knee bracing in
   preventing knee ligament injury.
 \newblock {\em Sports Medicine}, 39(11):937--960, 2009.
+
+\bibitem{um6}
+Pololu Robotics.
+\newblock Um6-lt orientation sensor.
 
 \bibitem{Shin20071145}
 Choongsoo~S. Shin, Ajit~M. Chaudhari, and Thomas~P. Andriacchi.

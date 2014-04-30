@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex progress_spec"] 1398807834 "progress_spec.aux" "progress_spec.bbl" "progress_spec" 1398808158
+["bibtex progress_spec"] 1398879462 "progress_spec.aux" "progress_spec.bbl" "progress_spec" 1398879465
   "/usr/local/texlive/2013/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "progress_spec.aux" 1398808157 4218 70a020cc5a644900f1b4fb8d1f0b7e6b ""
+  "progress_spec.aux" 1398879464 4934 931a6e7ee2d1a945f8bdd45009b66af7 ""
   "progress_spec.bcf" 0 -1 0 ""
-  "sections/references.bib" 1398563901 8923 d406586ebdbe82f51817b5987236c567 ""
+  "sections/references.bib" 1398817966 10021 867340fe646e334e570600d72f132a97 ""
   (generated)
   "progress_spec.blg"
   "progress_spec.bbl"
-["pdflatex"] 1398808156 "progress_spec.tex" "progress_spec.pdf" "progress_spec" 1398808158
+["pdflatex"] 1398879463 "progress_spec.tex" "progress_spec.pdf" "progress_spec" 1398879465
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty" 1303254447 7324 11d14f318d865f420e692d4e6c9c18c3 ""
@@ -46,18 +46,17 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
   "images/acl_anatomy.png" 1386876839 129972 6eae6995218a3d1c141b7ada70a82086 ""
   "images/block_diagram.PNG" 1386875640 32260 d88113a9d25cdae04489778d61b7007e ""
-  "images/graph.png" 1386876986 78230 b0a058cda444d9deada972d0a684962c ""
-  "images/results_graph.PNG" 1398808143 65405 848325ec5e5a34c0e08b358c200ae990 ""
-  "progress_spec.aux" 1398808157 4218 70a020cc5a644900f1b4fb8d1f0b7e6b ""
-  "progress_spec.bbl" 1398807834 4562 220bbeed937dca162e31f86c7190c431 "bibtex progress_spec"
-  "progress_spec.tex" 1398806985 9544 4a19c66f6cfb8cedcc6cfaa75af3e9a9 ""
+  "images/graph.png" 1398817966 66572 0e88213fdf26e5e4519e26f85d8b5470 ""
+  "images/results_graph.PNG" 1398879367 67092 405b3423146c36701157a8f827f5f1ad ""
+  "progress_spec.aux" 1398879464 4934 931a6e7ee2d1a945f8bdd45009b66af7 ""
+  "progress_spec.bbl" 1398879463 4932 ee8b24dd795aa0df474a728173f5c0c2 "bibtex progress_spec"
+  "progress_spec.tex" 1398808394 9450 948c9548d98c16ed372e524affbef6cd ""
   "sections/background.tex" 1398561503 2232 3bd5cc1809a6da6bba852500e010c86f ""
-  "sections/futurework.tex" 1398563597 4504 a1efed42f47aca076f6df55e75927a20 ""
-  "sections/implementation.tex" 1398804249 2263 9d212d90f193b2f2cf66f7dc75da39dc ""
-  "sections/model.tex" 1398807063 4541 e240e2a9505305faedd720ef4b0c4c26 ""
-  "sections/performance.tex" 1398563188 1282 9469a57d1743b2885efac818bea0339d ""
+  "sections/futurework.tex" 1398877031 4506 524c83708dcbee318c7781fe7df4f166 ""
+  "sections/implementation.tex" 1398877031 6130 3adbee7cd1afee864703a09849ac2763 ""
+  "sections/model.tex" 1398877031 2335 2b22f7a6ec55b10b4ca34e52370b437f ""
   "sections/related.tex" 1398561751 2630 31d71fed1e1ef70c04c729ffc92e8091 ""
-  "sections/results.tex" 1398807869 195 3431d5b8ff0454673137fe78ee93d565 ""
+  "sections/results.tex" 1398879457 3295 eb138e1e858ce7ab9a05505f1412d737 ""
   "sig-alternate.cls" 1386870634 58016 671190e929fd2b32b46dd0fe92041a8b ""
   (generated)
   "progress_spec.log"
